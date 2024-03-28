@@ -20,12 +20,26 @@ function checkElements() {
 //Given an array of objects, where each object represents an employee with an id, name, and salary property, write a function that returns a new array of employee objects sorted by their salary in ascending order.
 let employee = [
     { id: 1 },
-    { name: "Amanda" },
-    { salary: [1000, 2000, 3500, 8000] },
+    { name: "Casey" },
+    { salary: [2000, 4000, 8500, 10000] },
   ];
     employee.sort(function(a, b) {
     return a.salary - (b.salary);
   });
   employee.forEach((person) => console.log(employee.salary));
  console.log(employee);
-//Write a function that accepts an array of numbers and uses the forEach() method to console.log each number multiplied by 2.
+///Write a function that accepts an array of numbers and uses the forEach() method to console.log each number multiplied by 2.
+function multiply(number) {
+    number.forEach((item) => {
+       console.log(item * 2);
+    });
+   }
+   multiply([5, 6, 7, 8]);
+//Write a function that takes in an array of numbers and consoles the first four items multiplied by 8 and the last two added by 5. Console the array with the new values
+    function newArr(arr) {
+    const firstFour = arr.slice(0, 4).map(item => item * 8);
+    const lastTwo = arr.slice(-2).map(item => item + 5);
+    const changedArr = firstFour.concat(lastTwo);
+    console.log(changedArr);
+   }
+   newArr([40,50,60,70,80,90,100]);
